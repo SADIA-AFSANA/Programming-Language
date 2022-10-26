@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
+import RightSideNav from "../../componenet/RightSideNav";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
 import Description from "../../Pages/Description/Description/Description";
 import Home from "../../Pages/Home/Home/Home";
-import LogIn from "../../Pages/LogIn/LogIn";
-import Register from "../../Pages/Register/Register";
+import Login from "../../Pages/Login/Login/Login";
+import Register from "../../Pages/Login/Register/Register";
+
 
 export const routes = createBrowserRouter([
     {
@@ -25,12 +27,13 @@ export const routes = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/categories',
+                path: '/category',
                 element: <Category></Category>
             },
             {
-                path: '/categories/:id',
-                element: <Category></Category>,
+                path: '/category/:id',
+                element: <RightSideNav></RightSideNav>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
 
             },
             {
@@ -39,7 +42,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <LogIn></LogIn>
+                element: <Login></Login>
             },
             {
                 path: '/register',
