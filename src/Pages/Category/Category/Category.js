@@ -13,33 +13,37 @@ const Category = () => {
     const allNews = useLoaderData();
     return (
         <div>
-            <LeftSideNav></LeftSideNav>
+            {/* <LeftSideNav></LeftSideNav> */}
             <h2>This is category{allNews.length}</h2>
-            {
+            {/* {
                 allNews.map(news => <NewsSummeryCard
                     key={news._id}
                     news={news}
 
                 ></NewsSummeryCard>)
-            }
-            <LeftSideNav></LeftSideNav>
-            {/* <Container>
+            } */}
+            {/* <LeftSideNav></LeftSideNav> */}
+            <Container>
                 <Row>
-                    <Col lg="5">
+                    <Col lg="4">
                         <LeftSideNav></LeftSideNav>
                     </Col>
-                    <Col lg="3">
-                        <Outlet></Outlet>
-                    </Col>
-                    <Col lg="4">
-                        <RightSideNav></RightSideNav>
+
+                    <Col lg="8">
+                        {
+                            allNews.map(news => <NewsSummeryCard
+                                key={news._id}
+                                news={news}
+
+                            ></NewsSummeryCard>)
+                        }
                     </Col>
 
 
 
                 </Row>
 
-            </Container> */}
+            </Container>
         </div>
     );
 };

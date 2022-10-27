@@ -29,7 +29,7 @@ const Header = () => {
                         <Container>
                             <Navbar.Brand href="#home">
                                 <img
-                                    src="images.jpeg"
+                                    src="java.jpeg"
                                     width="30"
                                     height="30"
                                     className="d-inline-block align-top"
