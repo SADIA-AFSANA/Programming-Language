@@ -2,7 +2,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import './Header.css'
+import './Header.css';
+import Button from 'react-bootstrap/Button';
 
 import { Link } from 'react-router-dom';
 import React from 'react';
@@ -13,6 +14,11 @@ import { Image } from 'react-bootstrap';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
 
     return (
         <div>
@@ -51,10 +57,19 @@ const Header = () => {
                                     <Link to='/register'>Register</Link>
                                     <Link to='/login'>Login</Link>
                                     <Link to=''>
+                                        {
+                                            user.uid ?
+                                                <>
+                                                    <span>{user?.displayName}</span>
+                                                    <Button variant="light" onClick={handleLogOut}>LogOut</Button>
+                                                </>
+                                                : <>
+                                                    <Link to='/login'>Login</Link>
+                                                    <Link to='/register'>Register</Link></>
+                                        }
 
 
 
-                                        {user?.displayName}
                                     </Link>
                                     <Link >
                                         {user?.photoURL ?
