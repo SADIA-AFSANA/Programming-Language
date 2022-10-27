@@ -4,9 +4,11 @@ import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
 import Description from "../../Pages/Description/Description/Description";
+import FAQ from "../../Pages/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 export const routes = createBrowserRouter([
@@ -20,15 +22,15 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/home',
-                element: <Home></Home>
+                element: <Home></Home>,
             },
             {
                 path: '/blog',
-                element: <Blog></Blog>
+                element: <PrivateRoute><Blog></Blog></PrivateRoute>,
             },
             {
                 path: '/category',
-                element: <Category></Category>
+                element: <PrivateRoute><Category></Category></PrivateRoute>,
             },
             {
                 path: '/category/:id',
@@ -38,15 +40,19 @@ export const routes = createBrowserRouter([
             },
             {
                 path: 'details/:id',
-                element: <Description></Description>
+                element: <Description></Description>,
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <Login></Login>,
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <Register></Register>,
+            },
+            {
+                path: '/faq',
+                element: <PrivateRoute><FAQ></FAQ></PrivateRoute>,
             }
         ]
     },

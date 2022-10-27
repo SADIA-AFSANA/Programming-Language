@@ -16,8 +16,22 @@ const Header = () => {
 
     return (
         <div>
+
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
+                    <Navbar bg="">
+                        <Container>
+                            <Navbar.Brand href="#home">
+                                <img
+                                    src="images.jpeg"
+                                    width="30"
+                                    height="30"
+                                    className="d-inline-block align-top"
+                                    alt=""
+                                />
+                            </Navbar.Brand>
+                        </Container>
+                    </Navbar><br />
                     <Navbar.Brand href="#home">Programming-Language</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

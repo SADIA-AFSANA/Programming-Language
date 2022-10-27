@@ -1,18 +1,21 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 
 const Login = () => {
-
+    const [error, setError] = useState('');
     const navigate = useNavigate()
     const { providerLogin, signIn } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
 
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
@@ -20,7 +23,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
 
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
     }
@@ -35,8 +38,14 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                setError('');
+                navigate('/')
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+
+            })
     }
     return (
         <div>
@@ -51,16 +60,14 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control name="password" type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+
 
                 <Button className="" variant="primary" type="submit">
                     Log in
                 </Button>
 
                 <Form.Text className="text-danger ">
-                    We'll never share your email with anyone else.
+                    {error}
                 </Form.Text>
             </Form>
 
