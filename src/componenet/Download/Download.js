@@ -12,15 +12,15 @@ const Download = () => {
     };
     return (
         <div >
-            <FaDownload></FaDownload>
-            <h5>Download</h5>
+            {/* <FaDownload></FaDownload>
+            <h5>Download</h5> */}
             <div ref={ref} className="card lg:card bg-base-100shadow-xl">
                 <figure><img src='' alt="" /></figure>
 
             </div>
             <ReactToPdf targetRef={ref} filename="Course-Details.pdf">
                 {({ toPdf }) => (
-                    <button className='rounded-md m-5 py-2 px-3 bg-green-400' onClick={toPdf}>Generate pdf</button>
+                    <button className='rounded-md m-5 py-2 px-3 bg-green-400' onClick={toPdf}>Generate pdf<FaDownload></FaDownload></button>
                 )}
             </ReactToPdf>
 
