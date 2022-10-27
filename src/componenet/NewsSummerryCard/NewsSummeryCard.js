@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Download from '../Download/Download';
 
 
+
 const NewsSummeryCard = ({ news }) => {
     const { _id, tittle, image_url, details } = news;
     return (
