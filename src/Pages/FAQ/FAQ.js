@@ -14,6 +14,7 @@ const FAQ = () => {
 
             </div>
             <div><img src="go.png" alt="" />
+
                 <h2> Go is an open source programming language supported by Google</h2>
                 <p>“At the time, no single team member knew Go, but within a month, everyone was writing in Go and we were building out the endpoints. It was the flexibility, how easy it was to use, and the really cool concept behind Go (how Go handles native concurrency, garbage collection, and of course safety+speed.) that helped engage us during the build. Also, who can beat that cute mascot!”
 
