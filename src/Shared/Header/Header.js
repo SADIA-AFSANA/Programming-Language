@@ -10,6 +10,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { Image } from 'react-bootstrap';
+import { FaGoogle, FaGithub, FaUser } from "react-icons/fa";
 
 
 const Header = () => {
@@ -74,7 +75,7 @@ const Header = () => {
                                     <Link >
                                         {user?.photoURL ?
                                             <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
-                                            : <p></p>
+                                            : <FaUser></FaUser>
                                         }
                                     </Link>
                                 </Nav>

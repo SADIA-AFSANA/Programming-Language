@@ -2,11 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Website-Name ::Programming Language
+
+
 ## Live Link
 
 
 
-### Clint site
+### Client site
 
 
 ### Server site
@@ -24,6 +27,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 3=firebase
 ##(https://firebase.google.com/)
+
+
+4=react icons
+##(https://react-icons.github.io/react-icons/)
+
+
+5=fontawsome
+##(https://fontawesome.com/icons)
 
 
 
