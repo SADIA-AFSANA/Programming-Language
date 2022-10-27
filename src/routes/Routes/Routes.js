@@ -26,22 +26,21 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <PrivateRoute><Blog></Blog></PrivateRoute>,
+                element: <Blog></Blog>,
             },
             {
                 path: '/category',
-                element: <PrivateRoute><Category></Category></PrivateRoute>,
+                element: <Category></Category>,
+                loader: ({ params }) => fetch(`http://localhost:5000/language-categories/${params.id}`)
             },
             {
                 path: '/category/:id',
-                element: <RightSideNav></RightSideNav>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                element: <PrivateRoute><RightSideNav></RightSideNav></PrivateRoute>,
+                // loader: ({ params }) => fetch(`http://localhost:5000/category${params.id}`)
 
             },
-            {
-                path: 'details/:id',
-                element: <Description></Description>,
-            },
+
+
             {
                 path: '/login',
                 element: <Login></Login>,
@@ -52,7 +51,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/faq',
-                element: <PrivateRoute><FAQ></FAQ></PrivateRoute>,
+                element: <FAQ></FAQ>,
             }
         ]
     },

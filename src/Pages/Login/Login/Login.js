@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
@@ -74,6 +74,7 @@ const Login = () => {
             <div>
                 <Button onClick={handleGoogleSignIn}>log in with google</Button>
             </div>
+            <p>New to the Website?Please <Link to='/register'>Register</Link></p>
         </div>
     );
 };

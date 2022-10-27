@@ -54,11 +54,11 @@ const Header = () => {
                             </div>
                             <div>
                                 <Nav>
-                                    <Link to='/register'>Register</Link>
-                                    <Link to='/login'>Login</Link>
+                                    {/* <Link to='/register'>Register</Link>
+                                    <Link to='/login'>Login</Link> */}
                                     <Link to=''>
                                         {
-                                            user.uid ?
+                                            user?.uid ?
                                                 <>
                                                     <span>{user?.displayName}</span>
                                                     <Button variant="light" onClick={handleLogOut}>LogOut</Button>
@@ -73,7 +73,7 @@ const Header = () => {
                                     </Link>
                                     <Link >
                                         {user?.photoURL ?
-                                            <Image style={{ height: '40px' }} roundedCircle src={user.photoURL}></Image>
+                                            <Image style={{ height: '40px' }} roundedCircle src={user?.photoURL}></Image>
                                             : <p></p>
                                         }
                                     </Link>
