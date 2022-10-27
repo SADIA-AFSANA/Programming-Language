@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Website-Name ::Programming Language
 
 
-## Live Link
+## Live Link :: https://programming-language-2eaea.web.app
 
 
 
@@ -33,7 +33,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##(https://react-icons.github.io/react-icons/)
 
 
-5=fontawsome
+5=font awsome
 ##(https://fontawesome.com/icons)
 
 
