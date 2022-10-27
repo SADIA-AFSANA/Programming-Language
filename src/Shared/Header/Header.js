@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { Image } from 'react-bootstrap';
 import { FaGoogle, FaGithub, FaUser } from "react-icons/fa";
+import { useState } from 'react';
 
 
 const Header = () => {
@@ -19,6 +20,15 @@ const Header = () => {
         logOut()
             .then(() => { })
             .catch(error => console.error(error))
+    }
+
+    const [theme, setTheme] = useState("");
+
+    const dark = () => {
+        setTheme("dark");
+    };
+    const light = () => {
+        setTheme("light");
     }
 
     return (
@@ -80,6 +90,9 @@ const Header = () => {
                                     </Link>
                                 </Nav>
                             </div>
+
+                            <button onClick={dark} >{theme}</button>
+                            <button onClick={light}>{theme}</button>
                         </div>
                     </Navbar.Collapse>
                 </Container>
