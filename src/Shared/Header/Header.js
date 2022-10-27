@@ -45,7 +45,7 @@ const Header = () => {
                             <div >
                                 <Nav className="navbar">
                                     <Link to='/'>Home</Link>
-                                    <Link to='/category'>Courses</Link>
+                                    <Link to='/category/01'>Courses</Link>
                                     <Link to='/faq'>FAQ</Link>
                                     <Link to='/blog'>Blog</Link>
 
