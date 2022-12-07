@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Login.css'
 import { FaGoogle, FaGithub, FaUser } from "react-icons/fa";
+import useTitle from '../../../Hooks/useTitle';
 
 
 
@@ -18,7 +19,7 @@ const Login = () => {
     const googleProvider = new GoogleAuthProvider();
 
     const githubProvider = new GithubAuthProvider();
-
+    useTitle('Login')
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
 

@@ -42,7 +42,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/news/:id',
-                element: <PrivateRoute><News></News></PrivateRoute>,
+                element: <News></News>,
                 loader: ({ params }) => fetch(` https://programming-language-server-eight.vercel.app/news/${params.id}`)
             },
 

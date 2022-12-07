@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../Hooks/useTitle';
 
 const FAQ = () => {
+    useTitle('Faq')
     return (
         <div>
             <div><img src="javascript.jpeg" alt="" />

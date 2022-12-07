@@ -5,12 +5,14 @@ import NewsSummeryCard from '../../../componenet/NewsSummerryCard/NewsSummeryCar
 
 
 import RightSideNav from '../../../componenet/RightSideNav';
+import useTitle from '../../../Hooks/useTitle';
 
 import LeftSideNav from '../../LeftSideNav/LeftSideNav';
 
 
 const Category = () => {
     const allNews = useLoaderData();
+    useTitle('Courses')
     return (
         <div>
             {/* <LeftSideNav></LeftSideNav> */}

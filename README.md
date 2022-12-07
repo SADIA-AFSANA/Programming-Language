@@ -9,10 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 
-### Client site ::https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-SADIA-AFSANA
+### Client site ::https://github.com/SADIA-AFSANA/Programming-Language
 
 
-### Server site  ::https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-SADIA-AFSANA
+### Server site  ::https://github.com/SADIA-AFSANA/-Programming-Language-server
 
 
 
